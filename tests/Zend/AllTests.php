@@ -64,8 +64,6 @@ require_once 'Zend/Measure/AllTests.php';
 require_once 'Zend/Memory/AllTests.php';
 require_once 'Zend/MimeTest.php';
 require_once 'Zend/Mime/AllTests.php';
-require_once 'Zend/NavigationTest.php';
-require_once 'Zend/Navigation/AllTests.php';
 require_once 'Zend/Oauth/AllTests.php';
 require_once 'Zend/OpenIdTest.php';
 require_once 'Zend/OpenId/AllTests.php';
@@ -93,7 +91,6 @@ require_once 'Zend/UriTest.php';
 require_once 'Zend/Uri/AllTests.php';
 require_once 'Zend/ValidateTest.php';
 require_once 'Zend/Validate/AllTests.php';
-require_once 'Zend/View/AllTests.php';
 if (PHP_OS != 'AIX') {
     require_once 'Zend/Wildfire/AllTests.php';
 }
