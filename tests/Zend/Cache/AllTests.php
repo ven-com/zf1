@@ -37,7 +37,6 @@ require_once 'Zend/Cache/LibmemcachedBackendTest.php';
 require_once 'Zend/Cache/OutputFrontendTest.php';
 require_once 'Zend/Cache/PageFrontendTest.php';
 require_once 'Zend/Cache/SkipTests.php';
-require_once 'Zend/Cache/SqliteBackendTest.php';
 require_once 'Zend/Cache/StaticBackendTest.php';
 require_once 'Zend/Cache/TwoLevelsBackendTest.php';
 require_once 'Zend/Cache/WinCacheBackendTest.php';
