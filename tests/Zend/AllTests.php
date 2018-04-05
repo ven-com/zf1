@@ -93,7 +93,6 @@ require_once 'Zend/UriTest.php';
 require_once 'Zend/Uri/AllTests.php';
 require_once 'Zend/ValidateTest.php';
 require_once 'Zend/Validate/AllTests.php';
-require_once 'Zend/VersionTest.php';
 require_once 'Zend/View/AllTests.php';
 if (PHP_OS != 'AIX') {
     require_once 'Zend/Wildfire/AllTests.php';
