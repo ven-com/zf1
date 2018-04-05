@@ -70,7 +70,6 @@ require_once 'Zend/OpenId/AllTests.php';
 require_once 'Zend/PdfTest.php';
 require_once 'Zend/Pdf/AllTests.php';
 require_once 'Zend/ProgressBar/AllTests.php';
-require_once 'Zend/Reflection/AllTests.php';
 require_once 'Zend/RegistryTest.php';
 require_once 'Zend/Rest/AllTests.php';
 require_once 'Zend/Queue/AllTests.php';
