@@ -67,7 +67,6 @@ require_once 'Zend/Mime/AllTests.php';
 require_once 'Zend/Oauth/AllTests.php';
 require_once 'Zend/OpenIdTest.php';
 require_once 'Zend/OpenId/AllTests.php';
-require_once 'Zend/Paginator/AllTests.php';
 require_once 'Zend/PdfTest.php';
 require_once 'Zend/Pdf/AllTests.php';
 require_once 'Zend/ProgressBar/AllTests.php';
