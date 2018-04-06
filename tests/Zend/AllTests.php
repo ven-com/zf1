@@ -54,8 +54,6 @@ require_once 'Zend/Memory/AllTests.php';
 require_once 'Zend/MimeTest.php';
 require_once 'Zend/Mime/AllTests.php';
 require_once 'Zend/Oauth/AllTests.php';
-require_once 'Zend/OpenIdTest.php';
-require_once 'Zend/OpenId/AllTests.php';
 require_once 'Zend/PdfTest.php';
 require_once 'Zend/Pdf/AllTests.php';
 require_once 'Zend/ProgressBar/AllTests.php';
@@ -112,8 +110,6 @@ class Zend_AllTests
 
         // These tests require no output be sent prior to running as they rely
         // on internal PHP functions
-        $suite->addTestSuite('Zend_OpenIdTest');
-        $suite->addTest(Zend_OpenId_AllTests::suite());
         $suite->addTest(Zend_Session_AllTests::suite());
         $suite->addTest(Zend_Soap_AllTests::suite());
 
