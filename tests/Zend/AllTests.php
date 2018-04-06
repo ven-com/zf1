@@ -39,7 +39,6 @@ require_once 'Zend/CurrencyTest.php';
 require_once 'Zend/Crypt/AllTests.php';
 require_once 'Zend/DateTest.php';
 require_once 'Zend/Date/AllTests.php';
-require_once 'Zend/EventManager/AllTests.php';
 require_once 'Zend/ExceptionTest.php';
 require_once 'Zend/File/AllTests.php';
 require_once 'Zend/FilterTest.php';
