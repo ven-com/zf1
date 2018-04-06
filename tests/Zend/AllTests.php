@@ -67,7 +67,6 @@ require_once 'Zend/Serializer/AllTests.php';
 require_once 'Zend/Server/AllTests.php';
 require_once 'Zend/Session/AllTests.php';
 require_once 'Zend/Soap/AllTests.php';
-require_once 'Zend/Tag/AllTests.php';
 require_once 'Zend/Test/AllTests.php';
 require_once 'Zend/Text/AllTests.php';
 require_once 'Zend/TimeSyncTest.php';
@@ -180,7 +179,6 @@ class Zend_AllTests
         $suite->addTestSuite('Zend_RegistryTest');
         $suite->addTest(Zend_Serializer_AllTests::suite());
         $suite->addTest(Zend_Server_AllTests::suite());
-        $suite->addTest(Zend_Tag_AllTests::suite());
         $suite->addTest(Zend_Test_AllTests::suite());
         $suite->addTest(Zend_Text_AllTests::suite());
         $suite->addTest(Zend_Tool_AllTests::suite());
