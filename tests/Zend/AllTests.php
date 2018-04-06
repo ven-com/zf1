@@ -68,9 +68,6 @@ require_once 'Zend/UriTest.php';
 require_once 'Zend/Uri/AllTests.php';
 require_once 'Zend/ValidateTest.php';
 require_once 'Zend/Validate/AllTests.php';
-if (PHP_OS != 'AIX') {
-    require_once 'Zend/Wildfire/AllTests.php';
-}
 
 /**
  * @category   Zend
@@ -171,9 +168,6 @@ class Zend_AllTests
         $suite->addTest(Zend_Uri_AllTests::suite());
         $suite->addTestSuite('Zend_ValidateTest');
         $suite->addTest(Zend_Validate_AllTests::suite());
-        if (PHP_OS != 'AIX') {
-            $suite->addTest(Zend_Wildfire_AllTests::suite());
-        }
 
         return $suite;
     }
