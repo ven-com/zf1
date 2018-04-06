@@ -27,7 +27,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
 
 require_once 'Zend/Acl/AclTest.php';
 require_once 'Zend/Amf/AllTests.php';
-require_once 'Zend/Application/AllTests.php';
 require_once 'Zend/AuthTest.php';
 require_once 'Zend/Auth/AllTests.php';
 require_once 'Zend/Cache/AllTests.php';
@@ -43,7 +42,6 @@ require_once 'Zend/ExceptionTest.php';
 require_once 'Zend/File/AllTests.php';
 require_once 'Zend/FilterTest.php';
 require_once 'Zend/Filter/AllTests.php';
-require_once 'Zend/Gdata/AllTests.php';
 require_once 'Zend/Http/AllTests.php';
 require_once 'Zend/JsonTest.php';
 require_once 'Zend/Json/AllTests.php';
@@ -149,37 +147,24 @@ class Zend_AllTests
         // Start remaining tests...
         $suite->addTestSuite('Zend_Acl_AclTest');
         $suite->addTest(Zend_Amf_AllTests::suite());
-        $suite->addTest(Zend_Application_AllTests::suite());
         $suite->addTestSuite('Zend_AuthTest');
         $suite->addTest(Zend_Auth_AllTests::suite());
-        $suite->addTest(Zend_Barcode_AllTests::suite());
         $suite->addTest(Zend_Cache_AllTests::suite());
-        $suite->addTest(Zend_Captcha_AllTests::suite());
-        $suite->addTest(Zend_Cloud_AllTests::suite());
-        $suite->addTest(Zend_CodeGenerator_Php_AllTests::suite());
         $suite->addTestSuite('Zend_ConfigTest');
         $suite->addTest(Zend_Config_AllTests::suite());
         $suite->addTestSuite('Zend_Console_GetoptTest');
-        $suite->addTest(Zend_Controller_AllTests::suite());
         $suite->addTestSuite('Zend_CurrencyTest');
         $suite->addTest(Zend_Crypt_AllTests::suite());
         $suite->addTestSuite('Zend_DateTest');
         $suite->addTest(Zend_Date_AllTests::suite());
         $suite->addTest(Zend_Db_AllTests::suite());
-        $suite->addTestSuite('Zend_DebugTest');
-        $suite->addTest(Zend_Dom_AllTests::suite());
-        $suite->addTest(Zend_EventManager_AllTests::suite());
         $suite->addTestSuite('Zend_ExceptionTest');
-        $suite->addTest(Zend_Feed_AllTests::suite());
         $suite->addTest(Zend_File_AllTests::suite());
         $suite->addTestSuite('Zend_FilterTest');
         $suite->addTest(Zend_Filter_AllTests::suite());
-        $suite->addTest(Zend_Form_AllTests::suite());
-        $suite->addTest(Zend_Gdata_AllTests::suite());
         $suite->addTest(Zend_Http_AllTests::suite());
         $suite->addTestSuite('Zend_JsonTest');
         $suite->addTest(Zend_Json_AllTests::suite());
-        $suite->addTest(Zend_Layout_AllTests::suite());
         $suite->addTest(Zend_Ldap_AllTests::suite());
         $suite->addTestSuite('Zend_LoaderTest');
         $suite->addTest(Zend_Loader_AllTests::suite());
@@ -192,20 +177,15 @@ class Zend_AllTests
         $suite->addTestSuite('Zend_MimeTest');
         $suite->addTest(Zend_Mime_AllTests::suite());
         $suite->addTestSuite('Zend_NavigationTest');
-        $suite->addTest(Zend_Navigation_AllTests::suite());
         $suite->addTest(Zend_Oauth_AllTests::suite());
-        $suite->addTest(Zend_Paginator_AllTests::suite());
         $suite->addTestSuite('Zend_PdfTest');
         $suite->addTest(Zend_Pdf_AllTests::suite());
         $suite->addTest(Zend_ProgressBar_AllTests::suite());
         $suite->addTestSuite('Zend_RegistryTest');
-        $suite->addTest(Zend_Rest_AllTests::suite());
-        $suite->addTest(Zend_Reflection_AllTests::suite());
         $suite->addTest(Zend_Queue_AllTests::suite());
         $suite->addTest(Zend_Search_Lucene_AllTests::suite());
         $suite->addTest(Zend_Serializer_AllTests::suite());
         $suite->addTest(Zend_Server_AllTests::suite());
-        $suite->addTest(Zend_Service_AllTests::suite());
         $suite->addTest(Zend_Tag_AllTests::suite());
         $suite->addTest(Zend_Test_AllTests::suite());
         $suite->addTest(Zend_Text_AllTests::suite());
@@ -217,9 +197,6 @@ class Zend_AllTests
         $suite->addTest(Zend_Uri_AllTests::suite());
         $suite->addTestSuite('Zend_ValidateTest');
         $suite->addTest(Zend_Validate_AllTests::suite());
-        $suite->addTestSuite('Zend_ViewTest');
-        $suite->addTest(Zend_View_AllTests::suite());
-        $suite->addTestSuite('Zend_VersionTest');
         if (PHP_OS != 'AIX') {
             $suite->addTest(Zend_Wildfire_AllTests::suite());
         }
