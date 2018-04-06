@@ -63,7 +63,6 @@ require_once 'Zend/PdfTest.php';
 require_once 'Zend/Pdf/AllTests.php';
 require_once 'Zend/ProgressBar/AllTests.php';
 require_once 'Zend/RegistryTest.php';
-require_once 'Zend/Queue/AllTests.php';
 require_once 'Zend/Search/Lucene/AllTests.php';
 require_once 'Zend/Serializer/AllTests.php';
 require_once 'Zend/Server/AllTests.php';
@@ -180,7 +179,6 @@ class Zend_AllTests
         $suite->addTest(Zend_Pdf_AllTests::suite());
         $suite->addTest(Zend_ProgressBar_AllTests::suite());
         $suite->addTestSuite('Zend_RegistryTest');
-        $suite->addTest(Zend_Queue_AllTests::suite());
         $suite->addTest(Zend_Search_Lucene_AllTests::suite());
         $suite->addTest(Zend_Serializer_AllTests::suite());
         $suite->addTest(Zend_Server_AllTests::suite());
