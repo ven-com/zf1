@@ -26,9 +26,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
 
 require_once 'Zend/Log/Writer/AbstractTest.php';
 require_once 'Zend/Log/Writer/DbTest.php';
-if (PHP_OS != 'AIX') {
-    require_once 'Zend/Log/Writer/FirebugTest.php';
-}
 require_once 'Zend/Log/Writer/MailTest.php';
 require_once 'Zend/Log/Writer/MockTest.php';
 require_once 'Zend/Log/Writer/NullTest.php';
