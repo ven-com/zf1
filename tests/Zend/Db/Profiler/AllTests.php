@@ -24,8 +24,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'Zend_Db_Profiler_AllTests::main');
 }
 
-require_once 'Zend/Db/Profiler/FirebugTest.php';
-
 /**
  * @category   Zend
  * @package    Zend_Db
