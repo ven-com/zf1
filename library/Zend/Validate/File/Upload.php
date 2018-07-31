@@ -223,7 +223,7 @@ class Zend_Validate_File_Upload extends Zend_Validate_Abstract
             }
         }
 
-        return !empty($this->_messages);
+        return empty($this->_messages);
     }
 
     /**
