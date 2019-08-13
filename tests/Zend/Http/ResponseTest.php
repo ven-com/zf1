@@ -451,4 +451,39 @@ class Zend_Http_ResponseTest extends PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('imagetoolbar', $headers);
         $this->assertEmpty($headers['imagetoolbar']);
     }
+
+    /**
+     * Test that parsing HTTP2 response works.
+     */
+    public function testExtractHeadersShouldWorkWithHTTTP2()
+    {
+        $response = $this->readResponse('response_http_2');
+        $headers  = Zend_Http_Response::extractHeaders($response);
+
+        $this->assertArrayHasKey('connection', $headers);
+        $this->assertEquals('Keep-Alive', $headers['connection']);
+    }
+
+    /**
+     * Tests that version is validated properly when passed to the constructor.
+     *
+     * @param string $version
+     * @dataProvider constructorWithVersionDataProvider
+     */
+    public function testConstructorWithVersion($version)
+    {
+        try {
+            new Zend_Http_Response(200, array(), null, $version);
+        } catch (Zend_Http_Exception $e) {
+            $this->fail('Passing HTTP version ' . $version . ' generates an exception');
+        }
+    }
+
+    /**
+     * @return array
+     */
+    public function constructorWithVersionDataProvider()
+    {
+        return array('1.0', '1.1', '2', '11.11');
+    }
 }
