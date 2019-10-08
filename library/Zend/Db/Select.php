@@ -152,6 +152,12 @@ class Zend_Db_Select
     );
 
     /**
+     * Associative version of $_joinTypes for performance optimization
+     * @var array
+     */
+    protected static $_joinTypesAssoc;
+
+    /**
      * Specify legal union types.
      *
      * @var array
@@ -185,6 +191,10 @@ class Zend_Db_Select
     {
         $this->_adapter = $adapter;
         $this->_parts = self::$_partsInit;
+
+        if (self::$_joinTypesAssoc === null) {
+            self::$_joinTypesAssoc = array_flip(self::$_joinTypes);
+        }
     }
 
     /**
@@ -778,7 +788,7 @@ class Zend_Db_Select
      */
     protected function _join($type, $name, $cond, $cols, $schema = null)
     {
-        if (!in_array($type, self::$_joinTypes) && $type != self::FROM) {
+        if (!isset(self::$_joinTypesAssoc[$type]) && $type != self::FROM) {
             /**
              * @see Zend_Db_Select_Exception
              */
@@ -854,7 +864,7 @@ class Zend_Db_Select
                 'schema'        => $schema,
                 'tableName'     => $tableName,
                 'joinCondition' => $cond
-                );
+            );
             while ($tmpFromParts) {
                 $currentCorrelationName = key($tmpFromParts);
                 $this->_parts[self::FROM][$currentCorrelationName] = array_shift($tmpFromParts);
@@ -1344,7 +1354,7 @@ class Zend_Db_Select
             $type = strtolower($matches[1]);
             if ($type) {
                 $type .= ' join';
-                if (!in_array($type, self::$_joinTypes)) {
+                if (!isset(self::$_joinTypesAssoc[$type])) {
                     #require_once 'Zend/Db/Select/Exception.php';
                     throw new Zend_Db_Select_Exception("Unrecognized method '$method()'");
                 }
